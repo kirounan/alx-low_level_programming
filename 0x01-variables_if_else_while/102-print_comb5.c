@@ -18,14 +18,14 @@ int main(void)
 	{
 		for (y = '0'; y <= '8'; y++)
 		{
-			sum = y + ( x * 10 ) + 1;
-			for (z = sum / 10; z <= '9'; z++)
+			sum = (y - '0') + ( (x - '0') * 10 ) + 1;
+			for (z = (sum / 10)+'0'; z <= '9'; z++)
 			{
 				for (r = '0'; r <= '9'; r++)
 				{
-					if (z == sum / 10 && r == 0)
+					if (z == (sum / 10)+'0' && r == '0')
                                         {
-                                                r = sum % 10;
+                                                r = (sum % 10) + '0';
                                         }
 					putchar(x);
 					putchar(y);
