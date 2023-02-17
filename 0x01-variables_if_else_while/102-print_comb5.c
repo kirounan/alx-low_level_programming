@@ -13,20 +13,21 @@ int main(void)
 	int z;
 	int r;
 	int f;
+	int sum;
 
 	f = 0;
 	for (x = '0'; x <= '9'; x++)
 	{
-		for (y = '0'; y <= '9'; y++)
+		for (y = '0'; y <= '8'; y++)
 		{
-			for (z = '0'; z <= '9'; z++)
+			sum = y + ( x * 10 ) + 1;
+			for (z = sum / 10; z <= '9'; z++)
 			{
-				for (r = y + 1; r <= '9'; r++)
+				for (r = '0'; r <= '9'; r++)
 				{
-					if (z != '0' && r == y + 1 && f == 0)
+					if (z == sum / 10 && r == 0)
                                         {
-                                                r = '0';
-						f = 1;
+                                                r = sum % 10;
                                         }
 					putchar(x);
 					putchar(y);
@@ -40,7 +41,6 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-				f = 0;
 			}
 		}
 	}
