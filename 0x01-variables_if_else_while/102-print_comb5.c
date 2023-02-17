@@ -12,7 +12,9 @@ int main(void)
 	int y;
 	int z;
 	int r;
+	int f;
 
+	f = 0;
 	for (x = '0'; x <= '9'; x++)
 	{
 		for (y = '0'; y <= '8'; y++)
@@ -21,9 +23,10 @@ int main(void)
 			{
 				for (r = y + 1; r <= '9'; r++)
 				{
-					if (z == '0' && r == y + 1)
+					if (z != '0' && r == y + 1 && f == 0)
                                         {
-                                                r = '1';
+                                                r = '0';
+						f = 1;
                                         }
 					putchar(x);
 					putchar(y);
@@ -37,6 +40,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
+				f = 0;
 			}
 		}
 	}
