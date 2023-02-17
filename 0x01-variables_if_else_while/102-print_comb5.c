@@ -12,10 +12,8 @@ int main(void)
 	int y;
 	int z;
 	int r;
-	int f;
 	int sum;
 
-	f = 0;
 	for (x = '0'; x <= '9'; x++)
 	{
 		for (y = '0'; y <= '8'; y++)
