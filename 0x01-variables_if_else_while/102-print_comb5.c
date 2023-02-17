@@ -19,8 +19,12 @@ int main(void)
 		{
 			for (z = '0'; z <= '9'; z++)
 			{
-				for (r = z + 1; r <= '9'; r++)
+				for (r = 0; r <= '9'; r++)
 				{
+					if (x == '0' && y == '0' && z == '0' && r == '0')
+                                        {
+                                                r = 1;
+                                        }
 					putchar(x);
 					putchar(y);
 					putchar(' ');
