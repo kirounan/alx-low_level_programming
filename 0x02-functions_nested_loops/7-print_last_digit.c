@@ -10,7 +10,7 @@
  */
 int print_last_digit(int c)
 {
-	printf("%d", c % 10);
+	printf("%d", abs(c % 10));
 	fflush(stdout);
-	return (c % 10);
+	return (abs(c % 10));
 }
