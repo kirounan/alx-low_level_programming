@@ -7,6 +7,10 @@
  * Description: 'printing string'
  * Return: 0 (Success)
  */
+void printptch()
+{
+        puts("_putchar");
+}
 int main(void)
 {
 	printptch();
