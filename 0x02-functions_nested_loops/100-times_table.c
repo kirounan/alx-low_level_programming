@@ -28,7 +28,7 @@ void print_times_table(int n)
 			if ((res / 100) > 0)
 			{
 				putchar((res / 100) + '0');
-				putchar((res / 10) + '0');
+				putchar(((res / 10) % 10)  + '0');
 			}
 			else if ((res / 10) > 0)
 			{
