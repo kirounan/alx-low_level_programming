@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _islower - Check the value of c
+ * _isalpha - Check the value of c
  * @c: The number to be checked
  * Return: 1 if the number is letter. 0 otherwise
  */
