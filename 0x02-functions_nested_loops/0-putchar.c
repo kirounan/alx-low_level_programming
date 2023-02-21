@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
@@ -8,6 +9,6 @@
  */
 int main(void)
 {
-	puts("_putchar");
+	pintptch();
 	return (0);
 }
