@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * times_table - print time table of n
+ * print_times_table - print time table of n
  * @n: input number
  */
 void print_times_table(int n)
@@ -12,7 +12,7 @@ void print_times_table(int n)
 	int res;
 	int i;
 	int j;
-	
+
 	if (n > 15 || n < 0)
 	{
 		return;
@@ -20,6 +20,11 @@ void print_times_table(int n)
 	for (i = 0; i <= n; i++)
 	{
 		putchar('0');
+		if (n == 0)
+		{
+			putchar('\n');
+			break;
+		}
 		putchar(',');
 		putchar(' ');
 		for (j = 1; j <= n; j++)
