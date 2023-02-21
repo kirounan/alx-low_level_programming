@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "main.h"
+/* more headers goes there */
+/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ * Description: 'printing alphabet'
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
