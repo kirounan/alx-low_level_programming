@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include "main.h"
 /* more headers goes there */
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
- * Description: 'printing alphabet'
- * Return: 0 (Success)
- */
-void printptch()
+* printptch - print string
+*/
+void printptch(void)
 {
-        puts("_putchar");
+	puts("_putchar");
 }
+/**
+* print_alphabet  - print alphabet in lower case
+*/
 void print_alphabet(void)
 {
-        int i;
+	int i;
 
-        for (i = 'a';i <= 'z' ; i++)
-        {
-                putchar(i);
-        }
-        putchar('\n');
+	for (i = 'a';i <= 'z' ; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
 }
