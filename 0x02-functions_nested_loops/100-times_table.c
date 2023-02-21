@@ -20,12 +20,10 @@ void print_times_table(int n)
 	for (i = 0; i <= n; i++)
 	{
 		putchar('0');
-		if (n == 0)
+		if (n != 0)
 		{
-			putchar('\n');
-			break;
+			printf(", ");
 		}
-		printf(", ");
 		for (j = 1; j <= n; j++)
 		{
 			res = i * j;
@@ -44,11 +42,10 @@ void print_times_table(int n)
 				printf("  ");
 			}
 			putchar((res % 10) + '0');
-			if (j == n)
+			if (j != n)
 			{
-				break;
+				printf(", ");
 			}
-			printf(", ");
 		}
 		putchar('\n');
 	}
