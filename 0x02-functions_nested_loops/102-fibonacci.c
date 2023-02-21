@@ -7,9 +7,9 @@
 int main(void)
 {
 	int i;
-	int j;
-	int k;
-	int res;
+	long int j;
+	long int k;
+	long int res;
 
 	j = 1;
 	k = 2;
