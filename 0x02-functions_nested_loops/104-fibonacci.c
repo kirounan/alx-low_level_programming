@@ -22,7 +22,7 @@ int main(void)
 	for (i = 1; i < 91; i++)
 	{
 		printf(", %lu", k);
-		k = k + j;
+		k += j;
 		j = k - j;
 	}
 	o = j / 1000000000;
@@ -34,9 +34,9 @@ int main(void)
 		printf(", %lu", q + (m / 1000000000));
 		printf("%lu", m % 1000000000);
 		q += o;
-		o -= q;
+		o = q - o;
 		m += p;
-		p -= m;
+		p = m - p;
 	}
 	printf("\n");
 	return (0);
