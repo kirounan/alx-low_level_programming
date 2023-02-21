@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /* more headers goes there */
-/*
+/**
  * printptch - print string
  */
 void printptch(void)
 {
-        puts("_putchar");
+	puts("_putchar");
 }
 /* betty style doc for function main goes there */
 /**
