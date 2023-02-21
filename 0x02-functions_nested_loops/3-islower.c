@@ -17,3 +17,7 @@ int _islower(int c)
 		return (1);
 	}
 }
+void _putchar(int x)
+{
+	printf("%c",x);
+}
