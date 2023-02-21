@@ -7,9 +7,9 @@
  * Description: 'printing string'
  * Return: 0 (Success)
  */
-void printptch()
+void printptch(void)
 {
-        puts("_putchar");
+	puts("_putchar");
 }
 int main(void)
 {
