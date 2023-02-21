@@ -1,3 +1,4 @@
+#include <stdio.h>
 void printptch()
 {
 	puts("_putchar");
