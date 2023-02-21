@@ -9,6 +9,6 @@
  */
 int main(void)
 {
-	prinptch();
+	printptch();
 	return (0);
 }
