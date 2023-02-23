@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long int pr = 612852475143;
+	long int pr = 612852475143;
 	long int i = 3;
 
 	while (i <= pr / 2)
