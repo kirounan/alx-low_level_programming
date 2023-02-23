@@ -8,15 +8,20 @@
  */
 void print_number(int n)
 {
-	int rev;
-	int rem;
+	unsigned int n2;
+	unsigned int rev;
+	unsigned int rem;
 	int f;
 
 	rev = 0;
 	if (n < 0)
 	{
-		n *= -1;
+		n2 = n*-1;
 		_putchar('-');
+	}
+	else
+	{
+		n2 = n;
 	}
 	while (n != 0)
 	{
