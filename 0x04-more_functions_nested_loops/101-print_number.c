@@ -8,21 +8,23 @@
  */
 void print_number(int n)
 {
-	int rev;
-	int rem;
+	long rev;
+	long rem;
+	long n2;
 	int f;
 
 	rev = 0;
-	if (n < 0)
+	n2 = n;
+	if (n2 < 0)
 	{
-		n *= -1;
+		n2 *= -1;
 		_putchar('-');
 	}
-	while (n != 0)
+	while (n2 != 0)
 	{
-		rem = n % 10;
+		rem = n2 % 10;
 		rev = rev * 10 + rem;
-		n = n / 10;
+		n2 /= 10;
 	}
 	f = 0;
 	while (rev > 0)
