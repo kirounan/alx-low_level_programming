@@ -9,33 +9,15 @@
 void print_number(int n)
 {
 	unsigned int n2;
-	unsigned int rev;
-	unsigned int rem;
-	int f;
 
-	rev = 0;
 	if (n < 0)
 	{
-		n2 = n*-1;
+		n2 = -n;
 		_putchar('-');
-	}
-	else
-	{
+	} else
 		n2 = n;
-	}
-	while (n2 != 0)
-	{
-		rem = n2 % 10;
-		rev = rev * 10 + rem;
-		n2 /= 10;
-	}
-	f = 0;
-	while (rev > 0)
-	{
-		_putchar(rev % 10 + '0');
-		rev /= 10;
-		f = 1;
-	}
-	if (!f)
-		_putchar(rev + '0');
+
+	if (n1 / 10)
+		print_number(n2 / 10);
+	_putchar((n2 % 10) + '0');
 }
