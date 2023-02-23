@@ -4,11 +4,11 @@
 /**
  * print_numbers - prints from 0 to 9
  *
- * Return: 0 success
+ * Return: nothing
  */
 
 
-int print_numbers(void)
+void print_numbers(void)
 {
 	int c;
 
@@ -17,5 +17,4 @@ int print_numbers(void)
 		putchar(c);
 	}
 	putchar('\n');
-	return (0);
 }
