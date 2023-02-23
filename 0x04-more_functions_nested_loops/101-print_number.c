@@ -10,7 +10,9 @@ void print_number(int n)
 {
 	int rev;
 	int rem;
+	int f;
 
+	rev = 0;
 	if (n < 0)
 	{
 		n *= -1;
@@ -22,9 +24,13 @@ void print_number(int n)
 		rev = rev * 10 + rem;
 		n = n / 10;
 	}
+	f = 0;
 	while (rev > 0)
 	{
 		_putchar(rev % 10 + '0');
 		rev /= 10;
+		f = 1;
 	}
+	if (!f)
+		_putchar(rev + '0');
 }
