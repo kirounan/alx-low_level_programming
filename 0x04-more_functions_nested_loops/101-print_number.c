@@ -23,11 +23,11 @@ void print_number(int n)
 	{
 		n2 = n;
 	}
-	while (n != 0)
+	while (n2 != 0)
 	{
-		rem = n % 10;
+		rem = n2 % 10;
 		rev = rev * 10 + rem;
-		n /= 10;
+		n2 /= 10;
 	}
 	f = 0;
 	while (rev > 0)
