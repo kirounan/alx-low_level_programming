@@ -27,7 +27,7 @@ int _atoi(char *s)
 		{
 			while (isdigit(s[i]))
 			{
-				res = (s[i] - '0') + (res * 10) * si;
+				res = (s[i] - '0') * si + (res * 10);
 				i++;
 			}
 			break;
