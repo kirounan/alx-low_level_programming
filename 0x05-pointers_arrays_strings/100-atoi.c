@@ -27,13 +27,12 @@ int _atoi(char *s)
 		{
 			while (isdigit(s[i]))
 			{
-				res = (s[i] - '0') + res * 10;
+				res = (s[i] - '0') + (res * 10) * si;
 				i++;
 			}
 			break;
 		}
 		i++;
 	}
-	res *= si;
 	return (res);
 }
