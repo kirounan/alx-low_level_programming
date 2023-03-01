@@ -10,14 +10,18 @@ char *leet(char *s)
 {
 	int i;
 	int j;
-	char alpha[] = "aAeEoOtTlL";
+	char alphab[] = "aAeEoOtTlL";
 	char rep[] = "43071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; alpha[j] != '\0'; j++)
-			if (s[i] == alpha[j])
-				s[i] = rep[floor(j / 2)];
+		for (j = 0; alphab[j] != '\0'; j++)
+			if (s[i] == alphab[j])
+			{
+				int r = floor(j / 2);
+
+				s[i] = rep[r];
+			}
 	}
 	return (s);
 }
