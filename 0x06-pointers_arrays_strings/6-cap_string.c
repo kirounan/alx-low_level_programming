@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype,h>
+#include <ctype.h>
 #include "main.h"
 /**
  * cap_string - transform to uppercase.
