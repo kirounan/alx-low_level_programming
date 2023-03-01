@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
  * reverse_array - reverse string
  * @a: string to reverse
