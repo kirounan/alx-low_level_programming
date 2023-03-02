@@ -18,7 +18,7 @@ void print_number(int n)
 
 	while (res >= 1)
 	{
-		rea /= 10;
+		res /= 10;
 		num++;
 	}
 
