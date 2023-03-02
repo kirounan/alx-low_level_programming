@@ -7,28 +7,39 @@
  */
 void print_number(int n)
 {
-	int result;
-	int t;
-	int exp;
+	unsigned int res = n;
+	int num = 0;
+	int i;
 
-	exp = 1;
-	if (n >= 0)
-		result = n * -1;
-	else
+	if (n < 0)
+		res = -n;
+	if (!n)
+		num = 1;
+
+	while (res >= 1)
 	{
-		result = n;
-		_putchar('-');
+		res /= 10;
+		num++;
 	}
 
-	t = result;
-	while (t <= -10)
+	for (i = 0; i < num; i++)
 	{
-		exp *= 10;
-		t /= 10;
-	}
-	while (exp >= 1)
-	{
-		_putchar(((result / exp) % 10) * -1 + '0');
-		exp /= 10;
+		int pow = 1;
+		int j;
+		int k;
+
+		for (j = 0; j < num - i - 1; j++)
+		{
+			pow *= 10;
+		}
+
+		k = ((n / pow) % 10);
+		if (n < 0)
+		{
+			k = -k;
+			if (!i)
+				_putchar('-');
+		}
+		_putchar('0' + k);
 	}
 }
