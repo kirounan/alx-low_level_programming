@@ -40,6 +40,6 @@ void print_number(int n)
 			if (!i)
 				putchar('-');
 		}
-		putchar('0' + d);
+		putchar('0' + k);
 	}
 }
