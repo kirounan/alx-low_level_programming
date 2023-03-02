@@ -17,7 +17,7 @@ void print_number(int n)
 	else
 	{
 		result = n;
-		putchar('-');
+		_putchar('-');
 	}
 
 	t = result;
@@ -28,7 +28,7 @@ void print_number(int n)
 	}
 	while (exp >= 1)
 	{
-		putchar(((result / exp) % 10) * -1 + '0');
+		_putchar(((result / exp) % 10) * -1 + '0');
 		exp /= 10;
 	}
 }
