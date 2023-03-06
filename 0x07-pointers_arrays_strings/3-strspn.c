@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
 * _strspn - get length of substring
 * @s: pointer to string
