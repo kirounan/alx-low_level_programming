@@ -32,7 +32,7 @@ char *_strstr(char *haystack, char *needle)
  *
  * Return: 1 if exists, otherwise 0
  */
-int coincidence(char *x, char *y)
+int check(char *x, char *y)
 {
 	while (*y != '\0' && *x == *y)
 	{
