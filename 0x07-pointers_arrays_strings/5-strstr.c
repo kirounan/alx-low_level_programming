@@ -11,12 +11,16 @@ char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack)
 	{
-		if (*haystack == *needle)
+		char *x = haystack;
+		char *y = needle;
+		while (*y != '\0' && *x == *y)
+        	{
+                	y++;
+               		x++;
+        	}
+		if ((*haystack == *needle && !*y) || !*needle)
 		{
-			if (check(haystack, needle) || !*needle)
-			{
 				return (haystack);
-			}
 		}
 		else
 		{
@@ -24,24 +28,4 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	return (0);
-}
-/**
- * check - check if string x exists in string y
- * @x: source string
- * @y: string to check
- *
- * Return: 1 if exists, otherwise 0
- */
-int check(char *x, char *y)
-{
-	while (*y != '\0' && *x == *y)
-	{
-		y++;
-		x++;
-	}
-
-	if (*y)
-		return (1);
-	else
-		return (0);
 }
