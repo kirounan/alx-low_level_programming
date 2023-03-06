@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 				return(br);
 			}
 		}
-		if (!accept[letter])
+		if (!accept[i])
 		{
 			return(br);
 		}
