@@ -4,7 +4,6 @@
  * _strchr - prints from the first occurrence of a charachter in string
  * @s: input string
  * @c: character to find
- *
  * Return: new the charachter or 0 if doesnt exist
  */
 char *_strchr(char *s, char c)
