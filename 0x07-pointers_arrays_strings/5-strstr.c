@@ -9,18 +9,39 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
-
-	for (i = 0; needle[i]; i++)
+	while (*haystack)
 	{
-		for (j = 0; haystack[j]; j++)
+		if (*haystack == *needle)
 		{
-			if (needle[i] == haystack[j])
+			if (check(haystack, needle) || !*needle)
 			{
-				return (&haystack[j]);
+				return (haystack);
 			}
+		}
+		else
+		{
+			haystack++;
 		}
 	}
 	return (0);
+}
+/**
+ * check - check if string x exists in string y
+ * @x: source string
+ * @y: string to check
+ *
+ * Return: 1 if exists, otherwise 0
+ */
+int coincidence(char *x, char *y)
+{
+	while (*y != '\0' && *x == *y)
+	{
+		y++;
+		x++;
+	}
+
+	if (*y)
+		return (1);
+	else
+		return (0);
 }
