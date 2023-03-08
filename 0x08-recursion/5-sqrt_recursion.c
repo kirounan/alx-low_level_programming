@@ -10,7 +10,7 @@
 int sqrt_help(int x, int y)
 {
 	if (y * y == x)
-		return (b);
+		return (y);
 	else if (y * y < x)
 		return (-1);
 	return (sqrt_help(x, y - 1));
