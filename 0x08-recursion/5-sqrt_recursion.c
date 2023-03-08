@@ -4,16 +4,16 @@
 /**
  * sqrt_help - helper function (tail recursion) for sqrt
  * @x: same number as n
- * @y: number that iterates from n to 1
+ * @y: number that iterates from 1 to n
  * Return: the answer of sqrt if exists -1 otherwise
  */
 int sqrt_help(int x, int y)
 {
 	if (y * y == x)
 		return (y);
-	else if (y * y < x)
+	else if (y * y > x)
 		return (-1);
-	return (sqrt_help(x, y - 1));
+	return (sqrt_help(x, y + 1));
 }
 /**
  * _sqrt_recursion - returns the natural square root of n
@@ -23,5 +23,5 @@ int sqrt_help(int x, int y)
 int _sqrt_recursion(int n)
 {
 
-	return (sqrt_help(n, n));
+	return (sqrt_help(n, 1));
 }
