@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion - Prints the input string in reverse order followed by a new line
+ * _print_rev_recursion - Prints the input string
+ * in reverse order followed by a new line
  * @s:input  string
  * Return: nothing
  */
