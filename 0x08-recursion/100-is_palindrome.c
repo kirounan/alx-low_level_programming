@@ -4,14 +4,14 @@
 
 /**
  * palind_help - compares the string with its reverse
- * @a: input string
+ * @s: input string
  * @l: length of string
  * Return: 1 if palindorm 0 otherwise.
  */
 
 int palind_help(char *s, int l)
 {
-	if (*s != *(s + l))
+	if (*s != *(s + l - 1))
 		return (0);
 	else if (*s == 0)
 		return (1);
