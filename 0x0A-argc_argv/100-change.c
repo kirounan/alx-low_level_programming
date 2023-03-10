@@ -2,7 +2,8 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * main - prints the minimum number of coins to make ans amount of money
+ * main - prints the minimum number of 
+ * coins to make ans amount of money
  * if coins are 1 , 10 , 2 . 25 , 5
  * @argc: number of arguments
  * @argv: argument Strings
