@@ -11,7 +11,7 @@
 int wordcount(char *str)
 {
 
-	int i
+	int i;
 	int n = 0;
 
 	for (i = 0; str[i]; i++)
