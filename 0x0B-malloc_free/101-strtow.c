@@ -3,63 +3,108 @@
 #include <stdlib.h>
 
 /**
- * strtow - concatenates all the arguments of your program
- *@str: string
- *@av: arguments
- * Return: a pointer to a new string
+ * wordcount - function that counts words separeted by space
+ * @str: pointer to string
+ * Return: Number of words
  */
-char **strtow(char *str)
-{
-	int i;
-	int w, j, k, count, m, word;
-	char **p;
-	char *x;
 
-	w = 0;
-	j = 0;
-	i = 0;
-	count = 0;
-	if (!(*str) || str == NULL)
-		return (NULL);
+int wordcount(char *str)
+{
+
+	int i
+	int n = 0;
+
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == ' ' && (str[i + 1] != ' ' || !str[i + 1]))
-			w++;
-	}
-	p = (char **)malloc((w + 1));
-	if (p == NULL)
-		return (NULL);
-	for (word = 0; str[word] && j <= w; word++)
-	{
-		count = 0;
-		if (str[word] != ' ')
+
+		if (str[i] != ' ')
 		{
-			for (i = word ; str[i]; i++)
+			n++;
+
+			for (; str[i + 1] != ' ' && str[i + 1] != '\0'; i++)
+				;
+		}
+
+	}
+	return (n);
+}
+
+/**
+ * word_len - function that return the length of word
+ * @str: pointer to string
+ * Return: Length of word
+ */
+
+int word_len(char *str)
+{
+	int i, wn= 0;
+
+	for (i = 0; str[i] && str[i] != ' '; i++)
+		++n;
+
+	return (n);
+}
+
+/**
+ * free_matrix - function that frees a 2D grid of char pointers
+ * @grid: pointer to matrix
+ * @height: integer
+ * Return: npthing
+ */
+
+void free_matrix(char **grid, int height)
+{
+	int k;
+
+	for (k = 0; k <= height; k++)
+		free(grid[k]);
+
+	free(grid);
+}
+
+/**
+ * strtow - Splits a string into words
+ * @str: Char double pointer to string
+ * Return: Char double pointer of  an array of strings (words)
+ */
+
+char **strtow(char *str)
+{
+	int i, j = 0, k, wc, wl;
+	char **s = NULL;
+
+	wc = wordcount(str);
+
+	s = malloc(wc + 1);
+
+	if (s == NULL || !wc)
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ')
+		{
+			wl = (word_len(str + i));
+			s[j] = malloc((wl + 1) * sizeof(char));
+
+			if (s[j] == NULL)
 			{
-				if (str[i] == ' ')
-					break;
-				count++;
-			}
-			*(p + j) = (char *)malloc((count + 1));
-			if (*(p + j) == NULL)
-			{
-				for (k = 0; k <= j; k++)
-				{
-					x = p[k];
-					free(x);
-				}
-				free(p);
+				free_matrix(s, j);
 				return (NULL);
 			}
-			for (m = 0; word < i; word++)
-			{
-				p[j][m] = str[word];
-				m++;
-			}
-			p[j][m] = '\0';
+
+			for (k = 0; k < wl; i++, k++)
+				s[j][k] = str[i];
+
+			s[j][k] = '\0';
+
+			if (j == wc)
+				break;
+
 			j++;
 		}
 	}
-	p[j] = NULL;
-	return (p);
+
+	s[j] = '\0';
+	return (s);
 }
