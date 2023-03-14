@@ -40,7 +40,7 @@ int word_len(char *str)
 	int i;
 	int n = 0;
 
-	for (i = 0; str[i] && str[i] != ' '; i++)
+	for (i = 0; str[i] != '\0' && str[i] != ' '; i++)
 		++n;
 
 	return (n);
@@ -78,10 +78,10 @@ char **strtow(char *str)
 
 	s = malloc(wc + 1);
 
-	if (s == NULL || !wc)
+	if (s == NULL || wc == 0)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
 		{
