@@ -22,8 +22,8 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	n1 = length(s1);
-	n2 = length(s2);
+	n1 = strlen(s1);
+	n2 = strlen(s2);
 	strnew = (char *)malloc((n1 + n2 + 1));
 	if (strnew == NULL)
 	{
