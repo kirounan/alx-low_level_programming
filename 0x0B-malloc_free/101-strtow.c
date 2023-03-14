@@ -37,7 +37,8 @@ int wordcount(char *str)
 
 int word_len(char *str)
 {
-	int i, wn= 0;
+	int i;
+	int n = 0;
 
 	for (i = 0; str[i] && str[i] != ' '; i++)
 		++n;
