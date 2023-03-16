@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(98);
 	}
-	l1 = strlen(argv[1])
+	l1 = strlen(argv[1]);
 	l2 = strlen(argv[2]);
 	length = l1 + l2;
 	res = calloc(length, sizeof(int *));
