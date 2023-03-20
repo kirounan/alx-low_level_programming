@@ -16,9 +16,9 @@ struct dog
 /**
 * dog_t - typedef for dog
 */
-typedef struct dog Dog;
-void free_dog(Dog *d);
-Dog *dog1(char *name, float age, char *owner);
+typedef struct dog dog_t;
+void free_dog(dog_t *d);
+dog_t *dog1(char *name, float age, char *owner);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 #endif
