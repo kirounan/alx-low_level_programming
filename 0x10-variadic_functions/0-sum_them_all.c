@@ -2,7 +2,7 @@
 /**
  * sum_them_all - sum n parametes (all)
  *@n: the number of parameters
-* Description: this function sum parameters for count n 
+* Description: this function sum parameters for count n
 * the first parameter
 * Return: return the sum of n parameters
 */
