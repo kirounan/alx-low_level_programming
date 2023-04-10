@@ -2,7 +2,7 @@
 
 /**
  * append_text_to_file - appand a text to the end of file
- * @filename: filename to be created
+ * @filename: filename to open
  * @text_content: text content will be added to the file
  * Return: 1 if success or -1 if fail
  */
